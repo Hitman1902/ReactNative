@@ -1,9 +1,8 @@
 import React, {useEffect} from 'react';
 import {View, Text, StyleSheet, PermissionsAndroid} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
-// import messaging from '@react-native-firebase/messaging';
-// import analytics from '@react-native-firebase/analytics';
-
+import Navigate from './src/routes/index';
+import {ThemeProvider} from './src/components/context/ThemeContext';
 const App = () => {
   // useEffect(() => {
   //   // Request permission for push notifications (only iOS, Android is automatic)
@@ -64,9 +63,9 @@ const App = () => {
   }, []);
 
   return (
-    <View style={styles.body}>
-      <Text style={styles.text}>Firebase Integration with React Native</Text>
-    </View>
+    <ThemeProvider>
+      <Navigate />
+    </ThemeProvider>
   );
 };
 
