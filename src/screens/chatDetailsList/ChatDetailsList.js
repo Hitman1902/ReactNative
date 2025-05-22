@@ -1,4 +1,3 @@
-// screens/ChatDetailScreen.js
 import React, {useState, useEffect} from 'react';
 import {
   View,
@@ -122,7 +121,6 @@ const ChatDetailScreen = ({route, navigation}) => {
 
   return (
     <View style={[styles.container, {backgroundColor: colors.background}]}>
-      {/* Simple header */}
       <View style={[styles.header, {backgroundColor: colors.cardBackground}]}>
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="arrow-back-outline" size={28} color={colors.text} />
@@ -137,7 +135,6 @@ const ChatDetailScreen = ({route, navigation}) => {
         <Text style={[styles.name, {color: colors.text}]}>{user.name}</Text>
       </View>
 
-      {/* Chat messages */}
       <FlatList
         data={messages}
         renderItem={renderMessage}
@@ -146,7 +143,6 @@ const ChatDetailScreen = ({route, navigation}) => {
         inverted={false}
       />
 
-      {/* Input area */}
       <View style={styles.inputContainer}>
         <TextInput
           placeholder="Type here..."

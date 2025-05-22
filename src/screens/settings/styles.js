@@ -3,46 +3,37 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    padding: 20,
   },
-  scrollContent: {
-    paddingVertical: 40,
-    paddingHorizontal: 20,
+  card: {
+    padding: 20,
+    borderRadius: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 2},
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
-  profileContainer: {
+  icon: {
+    width: 28,
+    height: 28,
+    marginRight: 15,
+  },
+  label: {
+    flex: 1,
+    fontSize: 18,
+  },
+  header: {
+    flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 30,
   },
-  avatar: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
-  },
-  name: {
-    color: 'white',
-    fontSize: 18,
-    fontWeight: '600',
-  },
-  email: {
-    color: 'gray',
-    fontSize: 14,
-  },
-  menuItem: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#1a1a1a',
-    borderRadius: 12,
-    padding: 15,
-    marginVertical: 6,
-  },
-  icon: {
-    marginRight: 15,
-  },
-  menuText: {
-    flex: 1,
-    fontSize: 16,
-    color: 'white',
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginLeft: 10,
   },
 });
 
