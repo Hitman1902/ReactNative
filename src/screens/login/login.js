@@ -11,7 +11,7 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
-import black from '../../assets/black.jpg';
+import black from '../../assets/black.png';
 import {getAuth, signInWithEmailAndPassword} from '@react-native-firebase/auth';
 import styles from './styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -72,7 +72,7 @@ const Login = ({navigation}) => {
             style={styles.input}
             placeholder="Password"
             placeholderTextColor="#999"
-            secureTextEntry={!showPassword} // Toggle based on showPassword state
+            secureTextEntry={!showPassword}
             value={password}
             onChangeText={setPassword}
           />

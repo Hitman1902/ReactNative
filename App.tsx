@@ -1,24 +1,9 @@
 import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, PermissionsAndroid} from 'react-native';
+import {PermissionsAndroid} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
 import Navigate from './src/routes/index';
 import {ThemeProvider} from './src/components/context/ThemeContext';
 const App = () => {
-  // useEffect(() => {
-  //   // Request permission for push notifications (only iOS, Android is automatic)
-  //   messaging().requestPermission();
-
-  //   // Initialize Firebase Analytics
-  //   analytics().logEvent('app_open', {});
-
-  //   // Foreground message handler for push notifications
-  //   const unsubscribe = messaging().onMessage(async remoteMessage => {
-  //     console.log('Foreground Message: ', remoteMessage);
-  //   });
-
-  //   return unsubscribe;
-  // }, []);
-
   useEffect(() => {
     const notify = messaging().setBackgroundMessageHandler(
       async remoteMessage => {
@@ -44,9 +29,6 @@ const App = () => {
     messaging().onMessage(async remoteMessage => {
       console.log('Foreground Message: ', remoteMessage);
     });
-    // return()=> {
-    //   notify.remove
-    // }
   }, []);
 
   useEffect(() => {
@@ -70,16 +52,3 @@ const App = () => {
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});

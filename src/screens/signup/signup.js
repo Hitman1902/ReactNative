@@ -12,7 +12,7 @@ import {
 import CheckBox from '@react-native-community/checkbox';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
-import black from '../../assets/black.jpg';
+import black from '../../assets/black.png';
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -51,7 +51,7 @@ const Signup = ({navigation}) => {
         uid: user.uid,
         displayName: name,
         email: user.email,
-        photoURL: 'https://randomuser.me/api/portraits/men/1.jpg', // You can replace or upload
+        photoURL: 'https://randomuser.me/api/portraits/men/1.jpg',
       });
 
       Alert.alert('User account created & signed in successfully!');
@@ -104,7 +104,7 @@ const Signup = ({navigation}) => {
             style={styles.input}
             placeholder="Password"
             placeholderTextColor="#999"
-            secureTextEntry={!showPassword} // Toggle based on showPassword state
+            secureTextEntry={!showPassword}
             value={password}
             onChangeText={setPassword}
           />
@@ -124,7 +124,7 @@ const Signup = ({navigation}) => {
             style={styles.input}
             placeholder="Confirm Password"
             placeholderTextColor="#999"
-            secureTextEntry={!showConfirmPassword} // Toggle based on showPassword state
+            secureTextEntry={!showConfirmPassword}
             value={confirmPassword}
             onChangeText={setConfirmPassword}
           />
