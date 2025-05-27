@@ -1,20 +1,27 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import Login from '../screens/login/login';
-import Signup from '../screens/signup/signup';
+import Login from '@screens/login/login';
+import Signup from '@screens/signup/signup';
 import Routes from './routes';
 import BottomTabs from './BottomTab';
-import ChatDetailScreen from '../screens/chatDetailsList/ChatDetailsList';
-import PersonalDetails from '../screens/personalDetails/personalDetails';
-import SettingsScreen from '../screens/settings/Setting';
-import Privacy from '../screens/privacy/privacy';
-import Help from '../screens/help/help';
-import Reports from '../screens/reports/reports';
+import ChatDetailScreen from '@screens/chatDetailsList/ChatDetailsList';
+import PersonalDetails from '@screens/personalDetails/personalDetails';
+import SettingsScreen from '@screens/settings/Setting';
+import Privacy from '@screens/privacy/privacy';
+import Help from '@screens/help/help';
+import Reports from '@screens/reports/reports';
+import Welcome from '@screens/welcomeScreen/welcomeScreen';
+import ForgotPassword from '@screens/forgotPassword/forgotPassword';
 const Stack = createStackNavigator();
 
 const Navigation = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="Welcome">
+      <Stack.Screen
+        name="Welcome"
+        component={Welcome}
+        options={{headerShown: false, gestureEnabled: false}}
+      />
       <Stack.Screen
         name={Routes.LOGIN}
         component={Login}
@@ -59,6 +66,11 @@ const Navigation = () => {
         name={Routes.HELP}
         component={Help}
         options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ForgotPassword"
+        component={ForgotPassword}
+        options={{headerShown: false, gestureEnabled: false}}
       />
     </Stack.Navigator>
   );

@@ -1,4 +1,3 @@
-// context/ThemeContext.js
 import React, {createContext, useState, useContext} from 'react';
 
 const ThemeContext = createContext();
@@ -20,7 +19,7 @@ export const ThemeProvider = ({children}) => {
 const lightColors = {
   background: '#ffffff',
   text: '#333333',
-  cardBackground: '#f5f5f5',
+  cardBackground: '#ffffff',
   tabBarBackground: '#ffffff',
   tabBarActiveTint: '#6A3093',
   tabBarInactiveTint: '#888888',

@@ -10,7 +10,7 @@ import {
 import Icon from 'react-native-vector-icons/Ionicons';
 import {getAuth, signOut} from '@react-native-firebase/auth';
 import styles from './styles';
-import {useTheme} from '../../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 const AccountDetails = ({navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

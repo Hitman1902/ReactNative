@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {useTheme} from '../../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 const SettingsScreen = ({navigation}) => {

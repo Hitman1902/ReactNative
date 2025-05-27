@@ -1,8 +1,8 @@
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-import ChatListScreen from '../screens/chatList/ChatListScreen';
-import AccountDetails from '../screens/accountDetails/accountDetails';
+import ChatListScreen from '@screens/chatList/ChatListScreen';
+import AccountDetails from '@screens/accountDetails/accountDetails';
 const Tab = createBottomTabNavigator();
 
 const BottomTabs = () => {

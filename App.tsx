@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import {PermissionsAndroid} from 'react-native';
 import messaging from '@react-native-firebase/messaging';
-import Navigate from './src/routes/index';
-import {ThemeProvider} from './src/components/context/ThemeContext';
+import Navigate from '@routes/index';
+import {ThemeProvider} from '@components/context/ThemeContext';
 const App = () => {
   useEffect(() => {
     const notify = messaging().setBackgroundMessageHandler(

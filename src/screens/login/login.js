@@ -1,25 +1,13 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  ImageBackground,
-  Pressable,
-  Alert,
-} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
-import Icon from 'react-native-vector-icons/Ionicons';
-import LinearGradient from 'react-native-linear-gradient';
-import black from '../../assets/black.png';
+import {View, Text, TextInput, TouchableOpacity, Alert} from 'react-native';
 import {getAuth, signInWithEmailAndPassword} from '@react-native-firebase/auth';
 import styles from './styles';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Feather from 'react-native-vector-icons/Feather';
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [rememberMe, setRememberMe] = useState(false);
-  const [pressed, setPressed] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const handleLogin = async () => {
     if (!email || !password) {
@@ -47,68 +35,73 @@ const Login = ({navigation}) => {
       Alert.alert('Login Failed', message);
     }
   };
-
   return (
-    <ImageBackground source={black} style={styles.background}>
-      <Text style={styles.heading}>CHAT{'\n'}APPLICATION</Text>
-      <View style={styles.container}>
-        <Text style={styles.label}>Enter your login information</Text>
+    <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Text style={styles.logoIcon}>👻</Text>
+        <Text style={styles.logoText}>Chat App</Text>
+      </View>
 
-        <View style={styles.inputContainer}>
-          <Icon name="mail-outline" size={20} color="#999" />
+      <View style={styles.formContainer}>
+        <Text style={styles.title}>Sign In</Text>
+
+        <Text style={styles.label}>Email Address</Text>
+        <View style={styles.inputWrapper}>
+          <AntDesign name="user" size={20} color="#8a8a8a" />
           <TextInput
+            placeholder="andrew123@gmail.com"
+            placeholderTextColor="#8a8a8a"
             style={styles.input}
-            placeholder="Email"
-            placeholderTextColor="#999"
-            keyboardType="email-address"
             value={email}
             onChangeText={setEmail}
+            keyboardType="email-address"
           />
         </View>
 
-        <View style={styles.inputContainer}>
-          <Icon name="lock-closed-outline" size={20} color="#999" />
+        <Text style={styles.label}>Passwords</Text>
+        <View style={styles.inputWrapper}>
+          <Feather name="lock" size={20} color="#8a8a8a" />
           <TextInput
-            style={styles.input}
             placeholder="Password"
-            placeholderTextColor="#999"
+            placeholderTextColor="#8a8a8a"
             secureTextEntry={!showPassword}
+            style={styles.input}
             value={password}
             onChangeText={setPassword}
           />
-          <TouchableOpacity
-            onPress={() => setShowPassword(!showPassword)}
-            style={styles.eyeIcon}>
-            <Icon
-              name={showPassword ? 'eye-off-outline' : 'eye-outline'}
+          <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+            <Feather
+              name={showPassword ? 'eye-off' : 'eye'}
               size={20}
-              color="#999"
+              color="#8a8a8a"
             />
           </TouchableOpacity>
         </View>
-
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <LinearGradient
-            colors={['#4c6ef5', '#5f87ff']}
-            style={styles.gradient}>
-            <Text style={styles.loginText}>LOGIN</Text>
-          </LinearGradient>
+        <TouchableOpacity
+          style={styles.forgotPasswordButton}
+          onPress={() => navigation.navigate('ForgotPassword')}>
+          <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.signInButton} onPress={handleLogin}>
+          <Text style={styles.signInButtonText}>Sign In</Text>
         </TouchableOpacity>
 
         <Text style={styles.orText}>Or</Text>
 
-        <Pressable
-          onPress={() => {
-            setPressed(!pressed);
-            navigation.navigate('Signup');
-          }}>
-          <Text style={styles.signupText}>
-            Don't have an account?{' '}
-            <Text style={styles.signupLink}>Sign up</Text>
-          </Text>
-        </Pressable>
+        <View style={styles.socialContainer}>
+          <TouchableOpacity style={styles.socialIcon}>
+            <AntDesign name="google" size={30} color="#db4437" />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.signupContainer}>
+          <Text>Don't have an account? </Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+            <Text style={styles.signupText}>Sign Up.</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 

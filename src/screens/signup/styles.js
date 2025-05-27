@@ -1,102 +1,96 @@
 import {StyleSheet} from 'react-native';
 
 const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
   container: {
-    marginTop: 100,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
-    padding: 20,
-    justifyContent: 'center',
+    flex: 1,
+    backgroundColor: '#fff',
   },
-  heading: {
-    color: 'white',
-    fontSize: 30,
+  logoContainer: {
+    marginTop: 60,
+    alignItems: 'center',
+  },
+  logoIcon: {
+    fontSize: 32,
+  },
+  logoText: {
+    fontSize: 20,
+    fontWeight: '700',
+    color: '#5d3b23',
+    marginTop: 4,
+  },
+  formContainer: {
+    marginTop: 30,
+    paddingHorizontal: 30,
+    paddingVertical: 20,
+    backgroundColor: '#fff',
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+  },
+  title: {
+    fontSize: 26,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 50,
+    alignSelf: 'center',
+    marginBottom: 25,
   },
   label: {
-    color: '#aaa',
-    fontSize: 20,
-    marginBottom: 40,
-    textAlign: 'center',
+    marginTop: 10,
+    marginBottom: 5,
+    color: '#5d3b23',
+    fontWeight: '600',
   },
-  inputContainer: {
+  inputWrapper: {
     flexDirection: 'row',
-    backgroundColor: '#1a1a1a',
     alignItems: 'center',
+    borderColor: '#cfcfcf',
+    borderWidth: 1,
+    borderRadius: 25,
     paddingHorizontal: 15,
-    borderRadius: 10,
+    paddingVertical: 10,
     marginBottom: 15,
-    height: 50,
+    backgroundColor: '#fff',
   },
   input: {
     flex: 1,
-    color: '#fff',
     marginLeft: 10,
+    color: '#333',
   },
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 20,
+  signInButton: {
+    backgroundColor: '#5d3b23',
+    paddingVertical: 14,
+    borderRadius: 25,
     alignItems: 'center',
+    marginVertical: 15,
   },
-  rememberMe: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  rememberText: {
-    color: '#aaa',
-    marginLeft: 5,
-  },
-  forgotText: {
-    color: '#aaa',
-    textDecorationLine: 'underline',
-  },
-  loginButton: {
-    borderRadius: 10,
-    overflow: 'hidden',
-    marginBottom: 20,
-  },
-  gradient: {
-    paddingVertical: 15,
-    alignItems: 'center',
-  },
-  loginText: {
+  signInButtonText: {
     color: '#fff',
     fontWeight: 'bold',
+    fontSize: 16,
+  },
+  forgotText: {
+    color: '#7a7a7a',
+    textAlign: 'center',
+    textDecorationLine: 'underline',
   },
   orText: {
-    color: '#aaa',
     textAlign: 'center',
-    marginVertical: 10,
+    marginVertical: 20,
+    color: '#aaa',
   },
-  socialRow: {
+  socialContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginBottom: 30,
+    justifyContent: 'center',
+    gap: 20,
   },
-  socialButton: {
+  socialIcon: {
+    marginHorizontal: 10,
+  },
+  signupContainer: {
+    marginTop: 30,
     flexDirection: 'row',
-    backgroundColor: '#333',
-    borderRadius: 8,
-    paddingVertical: 10,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-  },
-  socialText: {
-    color: '#fff',
-    marginLeft: 10,
+    justifyContent: 'center',
   },
   signupText: {
-    color: '#aaa',
-    textAlign: 'center',
-  },
-  signupLink: {
-    color: '#4c6ef5',
+    color: '#e07c00',
     fontWeight: 'bold',
   },
 });

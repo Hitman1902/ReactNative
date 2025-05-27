@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#e5e5e5',
     alignItems: 'center',
+    margin: 5,
   },
   avatar: {
     width: 48,

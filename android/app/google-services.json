@@ -7,31 +7,25 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:901741907970:android:1354fa8b3d9cc77376d71b",
-        "android_client_info": {
-          "package_name": "com.firebasenotification"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBFziH1bVUQsP-KMiyQsJYin00lxsMg8_s"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:901741907970:android:ae18cc640808988376d71b",
         "android_client_info": {
           "package_name": "com.mynewproject"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "901741907970-tnd970fffoj002v97deoskdtd3i7nvgi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mynewproject",
+            "certificate_hash": "0f23f0232c5d697b77253ea8eb578b00943e8fa0"
+          }
+        },
+        {
+          "client_id": "901741907970-06tlg4l0ba0bha9g2da9iphp5m6obm37.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBFziH1bVUQsP-KMiyQsJYin00lxsMg8_s"
@@ -39,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901741907970-06tlg4l0ba0bha9g2da9iphp5m6obm37.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
