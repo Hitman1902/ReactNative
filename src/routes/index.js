@@ -4,7 +4,7 @@ import {
   DarkTheme,
 } from '@react-navigation/native';
 import Navigation from './navigation';
-import {useTheme} from '../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 const Navigate = () => {
   const theme = useTheme();
   return (

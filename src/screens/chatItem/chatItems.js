@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
 import styles from './styles';
-import {useTheme} from '../../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 const ChatItem = ({name, message, time, unreadCount, onPress}) => {
   const {colors} = useTheme();
   return (

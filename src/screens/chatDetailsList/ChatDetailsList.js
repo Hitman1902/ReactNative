@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import styles from './styles';
 import {getAuth} from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
-import {useTheme} from '../../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 const ChatDetailScreen = ({route, navigation}) => {
   const {colors} = useTheme();
   const {user} = route.params;

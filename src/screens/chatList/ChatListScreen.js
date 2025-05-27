@@ -9,11 +9,11 @@ import {
   ActivityIndicator,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import ChatItem from '../chatItem/chatItems';
+import ChatItem from '@screens/chatItem/chatItems';
 import styles from './styles';
 import {getAuth} from '@react-native-firebase/auth';
 import firestore from '@react-native-firebase/firestore';
-import {useTheme} from '../../components/context/ThemeContext';
+import {useTheme} from '@components/context/ThemeContext';
 
 const ChatListScreen = ({navigation}) => {
   const [users, setUsers] = useState([]);
